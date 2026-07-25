@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediOps — Smart Hospital Dashboards</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===================== LOGIN ===================== -->
+  <div id="login" class="login">
+    <div class="login-card">
+      <div class="login-head">
+        <div class="logo">M</div>
+        <div>
+          <div class="login-title">MediOps</div>
+          <div class="login-sub">Smart Hospital Dashboards · Project P7</div>
+        </div>
+      </div>
+      <p class="login-lead">Select your role to sign in</p>
+      <div id="role-list" class="role-list"></div>
+      <div class="login-note">
+        Access is role-scoped (FR-3). Views are de-identified by default (FR-10).
+        Every action is written to the access audit (FR-14).
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== APP ===================== -->
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><span class="logo sm">M</span> MediOps</div>
+      <nav id="nav" class="nav"></nav>
+      <div class="side-foot">
+        <div class="user-chip">
+          <div id="u-name" class="u-name"></div>
+          <div id="u-title" class="u-title"></div>
+        </div>
+        <button id="logout" class="linkbtn">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="tb-left">
+          <h1 id="view-title">Dashboard</h1>
+          <span id="view-sub" class="tb-sub"></span>
+        </div>
+        <div class="tb-right">
+          <div id="deid" class="deid" title="Wall display mode">
+            <div class="deid-info">
+              <span class="deid-label">Display mode</span>
+              <span id="deid-state" class="deid-state">De-identified</span>
+            </div>
+            <button id="deid-toggle" class="switch" role="switch" aria-checked="false">
+              <span class="knob"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <nav id="mnav" class="mnav"></nav>
+      <section id="view" class="view"></section>
+    </main>
+  </div>
+
+  <div id="toast-host"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+ward_key,ward_name,department,bed_capacity
+1,General Ward A,Medicine,30
+2,General Ward B,Surgery,25
+3,ICU,Critical Care,12
+4,ED,Emergency,15
+5,Maternity,Obstetrics,20

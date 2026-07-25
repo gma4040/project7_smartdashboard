@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P7 Dashboards — Login (demo)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-box">
+        <h1>Smart Hospital Dashboards</h1>
+        <p class="muted">Demo login — no password, pick a seeded user.</p>
+        {% if error %}<p class="error">{{ error }}</p>{% endif %}
+        <form method="POST" action="/login">
+            <input type="text" name="username" placeholder="e.g. dr_mehta" required>
+            <button type="submit">Log in</button>
+        </form>
+        <p class="muted small">
+            Seeded demo users: <code>dr_mehta</code> (dept_head, ICU-scoped),
+            <code>dr_rao</code> (superintendent, full view),
+            <code>owner_singh</code>, <code>mrd_officer1</code>, <code>dpo_priya</code>
+        </p>
+    </div>
+</body>
+</html>

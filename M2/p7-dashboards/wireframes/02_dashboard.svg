@@ -1,0 +1,18 @@
+<svg viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<rect width="700" height="450" fill="#f4f6f8"/>
+<text x="20" y="30" font-size="16" fill="#333">Screen 2 — Role dashboard (FR-3, FR-14)</text>
+<rect x="20" y="50" width="660" height="50" fill="#16324f"/>
+<text x="35" y="80" font-size="14" fill="#fff">Smart Hospital Dashboard</text>
+<text x="560" y="80" font-size="11" fill="#cde">dr_mehta · dept_head · Log out</text>
+<rect x="20" y="115" width="200" height="120" fill="#fff" stroke="#999" rx="6"/>
+<text x="35" y="140" font-size="12" fill="#333">ICU</text>
+<text x="35" y="158" font-size="10" fill="#888">Critical Care</text>
+<text x="35" y="195" font-size="28" fill="#16324f">72%</text>
+<text x="35" y="215" font-size="9" fill="#888">Occupancy (live)</text>
+<rect x="240" y="115" width="200" height="120" fill="#fff" stroke="#ccc" stroke-dasharray="4" rx="6"/>
+<text x="255" y="175" font-size="10" fill="#aaa" text-anchor="start">(hidden — outside</text>
+<text x="255" y="190" font-size="10" fill="#aaa" text-anchor="start">dept_head scope)</text>
+<text x="20" y="270" font-size="11" fill="#555">FR-3: only ICU tile shown — user is scoped to their own ward</text>
+<text x="20" y="288" font-size="11" fill="#555">FR-10: no patient names/IDs anywhere on tile — ward-level aggregate only</text>
+<text x="20" y="306" font-size="11" fill="#555">FR-14: this page view just wrote a row to audit_log (background, not shown to user)</text>
+</svg>

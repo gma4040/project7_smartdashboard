@@ -1,0 +1,7 @@
+role_key,role_name,permission_level
+1,dept_head,scoped
+2,superintendent,full
+3,mrd_officer,deidentified_only
+4,dpo,deidentified_only
+5,finance_head,scoped
+6,owner,deidentified_only

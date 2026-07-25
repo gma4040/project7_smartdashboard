@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard — {{ role }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Smart Hospital Dashboard</h1>
+        <div class="user-info">
+            {{ username }} &middot; <span class="role-badge">{{ role }}</span>
+            &middot; <a href="/logout">Log out</a>
+        </div>
+    </header>
+
+    <p class="muted">FR-3: this view is scoped to your role. FR-10: patient identifiers are
+        never shown here — all tiles are ward-level aggregates. FR-14: this view was just
+        written to audit_log.</p>
+
+    <div class="tiles">
+        {% for t in tiles %}
+        <div class="tile">
+            <h3>{{ t.ward_name }}</h3>
+            <p class="muted">{{ t.department }}</p>
+            <div class="metric">{{ t.occupancy_pct }}%</div>
+            <p class="metric-label">Occupancy (live, from fact_events)</p>
+            <p class="small">Admissions: {{ t.admissions }} &middot; Discharges: {{ t.discharges }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer class="muted small">
+        Stub routes not yet built: /reports/hmis (FR-5), /digest/preview (FR-7), /audit (FR-14 view) — M3.
+    </footer>
+</body>
+</html>
